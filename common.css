@@ -36,10 +36,42 @@ nav a:hover {
 }
 
 .pdf-image {
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
+  text-align: center; /* Center the image */
+}
+
+.pdf-image img {
+  max-width: 100%; /* Ensure the image doesn't exceed its parent's width */
+  height: auto; /* Maintain the image's aspect ratio */
+}
+
+/* Media queries for responsiveness */
+
+@media (max-width: 768px) {
+  /* Styles for devices with a maximum width of 768px (e.g., tablets and smaller screens) */
+
+  body {
+    font-size: 14px; /* Adjust the font size for smaller screens */
+  }
+
+  header {
+    padding: 10px; /* Adjust header padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Styles for devices with a maximum width of 480px (e.g., mobile phones) */
+
+  body {
+    font-size: 12px; /* Adjust the font size for even smaller screens */
+  }
+
+  header {
+    padding: 5px; /* Further adjust header padding for very small screens */
+  }
 }
 
